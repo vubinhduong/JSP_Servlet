@@ -1,23 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html>
-<head></head>
-<body>
-	<h1>Login Page</h1>
-	<form action="/JSP_Servlet/login" method="GET">
-		<table>
-			<tr>
-				<td><label>Tên đăng nhập: </label></td>
-				<td><input type="text" name="name"></td>
-			</tr>
-			<tr>
-				<td><label>Mật khẩu: </label></td>
-				<td><input type="text" name="pass"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit"></td>
-			</tr>
-		</table>
+<head>
+<link rel="stylesheet"
+	href="http://localhost:8080/JSP_Servlet/resources/css/style.css"
+	type="text/css">
+</head>
+<body style="background-color: #ddd;">
+	<form action="/JSP_Servlet/search" method="GET">
+		<div class="container">
+			<div class="register-form">
+				<form id="register-form">
+					<div class="header">
+						<h1>Đăng nhập</h1>
+					</div>
+					<hr>
+					<div class="content">
+						<div class="item">
+							<div class="r-label">
+								<label>Username:</label>
+							</div>
+							<div class="r-input">
+								<input class="input" id="username" type="text" name="name">
+							</div>
+						</div>
+						<div class="item">
+							<div class="r-label">
+								<label>Password:</label>
+							</div>
+							<div class="r-input">
+								<input class="input" id="password" type="password" name="pass">
+							</div>
+						</div>
+					</div>
+					<div class="footer">
+						<input class="submit-btn" type="submit">
+					</div>
+				</form>
+			</div>
+		</div>
 	</form>
 </body>
 </html>
