@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet"
+	<meta charset="UTF-8">
+	<title>Search</title>
+	<link rel="stylesheet"
 	href="http://localhost:8080/JSP_Servlet/resources/css/style.css"
 	type="text/css">
 </head>

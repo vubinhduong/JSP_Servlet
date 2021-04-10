@@ -6,18 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class ConnectDB {
-	public static void main(String[] args) {
-		// chạy class này để test connect DB
-		Connection conn = connectDB();
-		if (conn != null) {
-			System.out.println("Connect thành công");
-			closeConnectDB(conn);
-			if (conn == null)
-				System.out.println("Close thành công");
-		}
-	}
 
-	//Method connect DB và trả lại connection
 	public static Connection connectDB() {
 		Connection conn = null;
 		try {
@@ -47,6 +36,7 @@ public class ConnectDB {
 		}
 	}
 	
+	
 	//method thực thi sql và trả lại kết quả ResultSet
 	public static ResultSet executeSQL(String sql) {
 		Connection conn = connectDB();
@@ -59,4 +49,16 @@ public class ConnectDB {
 		}
 		return rs;
 	}
+	
+	
+	//method thực thi sql và không trả lại gì
+		public static void executeSQL2(String sql) {
+			Connection conn = connectDB();
+			try {
+				Statement statement = conn.createStatement();
+				statement.execute(sql);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 }

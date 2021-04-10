@@ -1,0 +1,132 @@
+body {
+	margin: auto;
+}
+
+.container {
+	width: 100%;
+	height: auto;
+	margin: 7% 0%;
+	display: flex;
+}
+
+.register-form {
+	width: 30%;
+	height: auto;
+	background: #fff;
+	margin: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+}
+
+#register-form {
+	height: 100%;
+	margin-top: 0px;
+}
+
+.header {
+	text-align: center;
+}
+
+.content {
+	padding: 20px 0px;
+}
+
+.item {
+	width: 100%;
+	height: 30px;
+	padding: 5px 30px;
+	font-size: 25px;
+}
+
+.r-label {
+	width: 30%;
+	float: left;
+}
+
+.r-input {
+	width: 60%;
+	padding-left: 20px;
+	float: left;
+}
+
+.input {
+	font-size: 20px;
+	width: 230px;
+	height: 30px;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+
+.footer {
+	width: 100%;
+	height: 60px;
+	padding-left: 45px;
+}
+
+.submit-btn {
+	width: 353px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-btn:hover {
+	background-color: #5f9b4c;
+	color: #fff;
+}
+
+#books-table {
+	background-color: #fff;
+	border-collapse: collapse;
+    margin: auto;
+    font-size: 18px;
+    font-family: sans-serif;
+    width: 70%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#books-table td, #books-table th {
+	padding: 12px 15px;
+}
+
+#books-table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
+}
+
+#books-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#books-table tr:hover {
+	background-color: #ddd;
+}
+
+#books-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+hr {
+	border-color: #eee;
+}
+
+h1 {
+	margin: 10px 0px 0px 0px;
+	font-family: SFProDisplay-Bold, Helvetica, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:active {
+	color: red;
+}

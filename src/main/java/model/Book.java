@@ -33,6 +33,11 @@ public class Book {
 		return listBook;
 	}
 	
+	public static void deleteBookById(String id) {
+		String sql = "DELETE FROM Book WHERE book_id = '" + id + "';";
+		ConnectDB.executeSQL2(sql);
+	}
+	
 	public Book() {
 		super();
 	}

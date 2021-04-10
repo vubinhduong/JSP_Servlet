@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <html>
 <head>
-<link rel="stylesheet"
+	<title>Login</title>
+	<link rel="stylesheet"
 	href="http://localhost:8080/JSP_Servlet/resources/css/style.css"
 	type="text/css">
 </head>
