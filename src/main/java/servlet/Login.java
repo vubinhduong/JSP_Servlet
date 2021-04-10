@@ -14,7 +14,7 @@ public class Login extends HttpServlet {
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
 
-
+		
 		if (User.checkLogin(name, pass)) {
 			// lay ten nguoi dung tu request va luu vao session
 			HttpSession session = request.getSession();
