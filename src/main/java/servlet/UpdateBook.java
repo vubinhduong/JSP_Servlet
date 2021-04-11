@@ -15,11 +15,8 @@ public class UpdateBook extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
+		Book book = Book.getBookById(id);
+		request.setAttribute("item", book);
 		request.getRequestDispatcher("/view/updateBook.jsp").forward(request, response);
-//		Book.deleteBookById(id);
-//		HttpSession session = request.getSession();
-//		String input = "/JSP_Servlet/result?input=" + session.getAttribute("input").toString();
-//		System.out.println(input);
-//		response.sendRedirect(input);
 	}
 }

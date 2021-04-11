@@ -13,7 +13,7 @@
 		<servlet-name>loginToSearch</servlet-name>
 		<url-pattern>/search</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>searchToHomePage</servlet-name>
 		<servlet-class>servlet.Search</servlet-class>
@@ -22,7 +22,7 @@
 		<servlet-name>searchToHomePage</servlet-name>
 		<url-pattern>/result</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>updateBook</servlet-name>
 		<servlet-class>servlet.UpdateBook</servlet-class>
@@ -31,7 +31,7 @@
 		<servlet-name>updateBook</servlet-name>
 		<url-pattern>/update</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>deleteBook</servlet-name>
 		<servlet-class>servlet.DeleteBook</servlet-class>
@@ -39,6 +39,15 @@
 	<servlet-mapping>
 		<servlet-name>deleteBook</servlet-name>
 		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>updatedBook</servlet-name>
+		<servlet-class>servlet.UpdatedBook</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updatedBook</servlet-name>
+		<url-pattern>/updated</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>

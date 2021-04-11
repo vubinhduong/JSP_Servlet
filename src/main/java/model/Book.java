@@ -13,13 +13,13 @@ public class Book {
 	private String name;
 	private String publisher;
 	private int price;
-	
+
 	public static List<Book> getBookByName(String input) {
 		List<Book> listBook = new ArrayList<Book>();
-		String sql = "SELECT * FROM Book WHERE book_name like '%" + input + "%';";
+		String sql = "SELECT * FROM book WHERE book_name like '%" + input + "%';";
 		ResultSet rs = ConnectDB.executeSQL(sql);
 		try {
-			while(rs.next()) {
+			while (rs.next()) {
 				String book_id = rs.getString(1);
 				String book_name = rs.getString(2);
 				String publisher = rs.getString(3);
@@ -32,16 +32,39 @@ public class Book {
 		}
 		return listBook;
 	}
-	
+
+	public static Book getBookById(String id) {
+		String sql = "SELECT * FROM book WHERE book_id = '" + id + "';";
+		ResultSet rs = ConnectDB.executeSQL(sql);
+		Book book = new Book();
+		try {
+			while (rs.next()) {
+				book.setId(rs.getString(1));
+				book.setName(rs.getString(2));
+				book.setPublisher(rs.getString(3));
+				book.setPrice(rs.getInt(4));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return book;
+	}
+
 	public static void deleteBookById(String id) {
-		String sql = "DELETE FROM Book WHERE book_id = '" + id + "';";
+		String sql = "DELETE FROM book WHERE book_id = '" + id + "';";
 		ConnectDB.executeSQL2(sql);
 	}
 	
+	public static void updateBook(String id, String name, String publisher, int price) {
+		String sql = "UPDATE book SET book_name = '" + name + "', publisher = '" + publisher + "', price = '" + price + "' WHERE book_id = '" + id + "';";
+		System.out.println(sql);
+		ConnectDB.executeSQL2(sql);
+	}
+
 	public Book() {
 		super();
 	}
-	
+
 	public Book(String id, String name, String publisher, int price) {
 		super();
 		this.id = id;
