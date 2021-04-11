@@ -11,8 +11,8 @@ public class ConnectDB {
 		Connection conn = null;
 		try {
 			String db = "db_07";
-			String admin = "root";
-			String password = "duong123";
+			String admin = "test123";
+			String password = "test123";
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + db, admin, password);
 			System.out.println("Connect DB successfully!");

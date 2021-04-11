@@ -18,9 +18,11 @@ public class Login extends HttpServlet {
 			// lay ten nguoi dung tu request va luu vao session
 			HttpSession session = request.getSession();
 			session.setAttribute("username", name);
-
+			
+			request.setAttribute("loginResult", true);
 			request.getRequestDispatcher("/view/searchForm.jsp").forward(request, response);
 		} else {
+			request.setAttribute("loginResult", false);
 			request.getRequestDispatcher("/view/login.jsp").forward(request, response);
 		}
 	}
