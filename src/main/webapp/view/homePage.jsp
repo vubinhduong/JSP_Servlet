@@ -6,14 +6,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>List Books</title>
-	<link rel="stylesheet"
-	href="http://localhost:8080/JSP_Servlet/resources/css/style.css"
-	type="text/css">
+	<link rel="stylesheet" href="http://localhost:8080/JSP_Servlet/resources/css/style.css" type="text/css">
 </head>
 <body style="background-color: #eee;">
 	<jsp:include page="header.jsp"></jsp:include>
 	<div style="padding: 50px 0px 0px 200px; font-size: 25px;">
-		<p style="green;">Từ khóa đã chọn: <span style="color: red">${input}</span></p>
+		<p style="green;">Từ khóa đã chọn: <span style="color: red"><%=session.getAttribute("input")%></span></p>
 	</div>
 	<div class="container" style="margin: -3% 0%;">
 		<table id="books-table" style="margin-top: 50px;">

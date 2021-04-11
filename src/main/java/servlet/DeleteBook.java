@@ -10,9 +10,10 @@ import javax.servlet.http.HttpSession;
 
 import model.Book;
 
-public class DeleteBook extends HttpServlet{
+public class DeleteBook extends HttpServlet {
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String id = request.getParameter("id");
 		Book.deleteBookById(id);
 		HttpSession session = request.getSession();

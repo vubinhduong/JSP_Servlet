@@ -64,6 +64,20 @@ body {
 	padding-left: 45px;
 }
 
+.update-btn {
+	width: 150px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.update-btn:hover {
+	background-color: #5f9b4c;
+	color: #fff;
+}
+
 .submit-btn {
 	width: 353px;
 	height: 40px;
